@@ -35,7 +35,7 @@ class PlaceDetails extends React.Component {
                 }}
               >
                 <h4>
-                  <b>Name :{place.name}</b>
+                  <b>Name :{placeData.name}</b>
                   <span className={`dot ${favorite && "favorite"}`} />
                 </h4>
                 <button
@@ -48,7 +48,7 @@ class PlaceDetails extends React.Component {
               </div>
               <p>
                 <b>Location :</b>
-                {place.location}
+                {placeData.location}
               </p>
               <p>
                 <b>Description :</b>
