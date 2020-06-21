@@ -1,12 +1,12 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { featchPlaceById } from "../Redux/Actions/PlaceDetails";
+import { fetchPlaceById } from "../Redux/Actions/PlaceDetails";
 import { handelFavoriteList } from "../Redux/Actions/FavoriteList";
 
 class PlaceDetails extends React.Component {
   componentDidMount() {
-    this.props.match.params.id && this.props.featchPlaceById();
+    this.props.match.params.id && this.props.fetchPlaceById();
   }
   render() {
     const { placeData, handelFavoriteList, favoriteList } = this.props;
@@ -68,7 +68,7 @@ const mapStateToProps = state => ({
   favoriteList: state.favoriteList
 });
 const mapDispatchToProps = dispatch => ({
-  featchPlaceById: bindActionCreators(featchPlaceById, dispatch),
+  fetchPlaceById: bindActionCreators(fetchPlaceById, dispatch),
   handelFavoriteList: bindActionCreators(handelFavoriteList, dispatch)
 });
 
